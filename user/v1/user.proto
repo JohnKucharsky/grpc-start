@@ -2,10 +2,17 @@ syntax = "proto3";
 
 package user.v1;
 
-option go_package
+option go_package = "github.com/JohnKucharsky/grpc-start/gen/go/user/va;userpb";
 
 message User {
   string uuid = 1;
   string fullname = 2;
   int64 birth_year = 3;
+  uint32 salary = 4;
+  repeated Address addresses = 5;
+}
+
+message Address{
+  string street = 1;
+  string city  = 2;
 }
