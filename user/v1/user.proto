@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package user.v1;
+
+option go_package
+
+message User {
+  string uuid = 1;
+  string fullname = 2;
+  int64 birth_year = 3;
+}
